@@ -1,0 +1,28 @@
+<section class="books">
+  <form class="add" [formGroup]="formValue">
+    <h4>ADD BOOKS</h4>
+    <input type="text" name="name" required="true" formControlName="bookName" />
+    <div *ngIf="add; else edit">
+      <button class="transparent" (click)="addBook()">ADD</button>
+    </div>
+
+    <ng-template #edit>
+      <button class="blue" (click)="updateBook()">UPDATE</button></ng-template
+    >
+  </form>
+
+  <div class="list">
+    <h4>LIST OF BOOKS</h4>
+    <li
+      *ngFor="let book of books; let i = index"
+      class="book {{ book.isFavorite ? 'even blue' : 'even' }}"
+    >
+      <h4>
+        <span>{{ i + 1 }}</span> {{ book.name }}
+        <i class="bx bxs-like" (click)="changeFavorite(book)"></i>
+      </h4>
+      <button (click)="onDelete(book.id)">DELETE</button>
+      <button (click)="editBook(book)">EDIT</button>
+    </li>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+<section class="books">
+  <div class="list">
+    <h4>LIST FAVORITES</h4>
+    <li *ngFor="let fav of favorites; let i = index" class="even">
+      <h4>
+        <span>{{ i + 1 }}</span> {{ fav.name }}
+      </h4>
+    </li>
+  </div>
+</section>

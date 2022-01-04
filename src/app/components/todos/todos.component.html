@@ -1,0 +1,34 @@
+<section class="category">
+  <form class="add" [formGroup]="formValue">
+    <h4>ADD CATEGORY</h4>
+    <input
+      type="text"
+      name="name"
+      required="true"
+      formControlName="categoryName"
+    />
+    <div *ngIf="add; else edit">
+      <button class="transparent" (click)="addCategory()">ADD</button>
+    </div>
+
+    <ng-template #edit>
+      <button class="blue" (click)="updateCategory()">
+        UPDATE
+      </button></ng-template
+    >
+  </form>
+
+  <div class="list">
+    <h4>LIST OF CATEGORIES</h4>
+    <li
+      *ngFor="let cat of categories; let i = index"
+      class="i {{ i % 2 == 0 ? 'even' : '' }}"
+    >
+      <h4>
+        <span>{{ i + 1 }}</span> {{ cat.name }}
+      </h4>
+      <button (click)="onDelete(cat.id)">DELETE</button>
+      <button (click)="editCategory(cat)">EDIT</button>
+    </li>
+  </div>
+</section>
