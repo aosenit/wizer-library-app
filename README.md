@@ -1,4 +1,4 @@
-# AngularTwo
+#LIBRARY WEB APP
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+A Library Web App, powered by Angular, it shows categories, and books, enphasizing on CRUD operation, using MOCK API as backend Install Node Js, then copy code from this repo or download the zip file. After Opening the file, install all npm dependencies, using npm i, then, using ng serve --open (CLI command) open app on local pc at port 4200. Then navigate to Categories or Books or Favorites. UI is user friendly and responsive on Big screen and mobile.
